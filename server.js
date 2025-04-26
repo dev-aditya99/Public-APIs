@@ -2,6 +2,9 @@ import express from "express"
 import http from "http"
 import cors from "cors"
 import passwordRouter from "./routes/password_generator.route.js";
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const PORT = 5000
 const app = express();
