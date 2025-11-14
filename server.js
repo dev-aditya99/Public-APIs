@@ -3,6 +3,7 @@ import http from "http"
 import cors from "cors"
 import passwordRouter from "./routes/password_generator.route.js";
 import dotenv from "dotenv"
+import sendAPITouter from "./routes/sentAPI.route.js";
 
 dotenv.config()
 
@@ -20,6 +21,7 @@ app.use(cors({
 }));
 
 app.use("/auth", passwordRouter);
+app.use("/api", sendAPITouter);
 
 server.listen(PORT, () => {
     console.log("Server Running on PORT " + PORT);
