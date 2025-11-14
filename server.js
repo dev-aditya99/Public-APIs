@@ -15,7 +15,7 @@ app.use(express.json());
 const server = http.createServer(app);
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173", // The frontend domain
+    origin: "*", // The frontend domain
     credentials: true, // This allows cookies to be sent in cross-origin requests
     methods: ["POST", "GET"]
 }));
